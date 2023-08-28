@@ -3,7 +3,7 @@ LABEL org.opencontainers.image.source=https://github.com/campbelljlowman/fazool-
 
 WORKDIR /app
 
-COPY *.py /app/
+COPY src /app/
 
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt

@@ -5,6 +5,8 @@ UNIQUE_VERSION=${STABLE_VERSION}-${shell date "+%Y.%m.%d"}-${shell git rev-parse
 STABLE_IMAGE_TAG=${REGISTRY}/${IMAGE_NAME}:${STABLE_VERSION}
 UNIQUE_IMAGE_TAG=${REGISTRY}/${IMAGE_NAME}:${UNIQUE_VERSION}
 
+ENV_FILE=./.env
+
 include .env
 export
 
@@ -13,6 +15,7 @@ run:
 
 run-docker:
 	docker run --rm \
+	--env-file ${ENV_FILE} \
 	-v ./destination_email_addresses.json:/app/destination_email_addresses.json \
 	${UNIQUE_IMAGE_TAG}
 
