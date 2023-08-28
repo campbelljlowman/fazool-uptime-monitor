@@ -1,5 +1,5 @@
 REGISTRY=ghcr.io
-IMAGE_NAME=campbelljlowman/fazool-uptime-uptime-monitor
+IMAGE_NAME=campbelljlowman/fazool-uptime-monitor
 STABLE_VERSION=0.1.0
 UNIQUE_VERSION=${STABLE_VERSION}-${shell date "+%Y.%m.%d"}-${shell git rev-parse --short HEAD}
 STABLE_IMAGE_TAG=${REGISTRY}/${IMAGE_NAME}:${STABLE_VERSION}
