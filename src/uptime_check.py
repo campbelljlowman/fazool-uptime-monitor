@@ -1,6 +1,6 @@
 import requests
 import datetime
-import src.email_client as email_client
+import email_client as email_client
 
 class UptimeCheck: 
     def __init__(self, endpoint, expected_api_response_message):

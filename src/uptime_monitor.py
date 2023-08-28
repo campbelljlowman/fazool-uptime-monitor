@@ -1,4 +1,4 @@
-import src.uptime_check as uptime_check
+import uptime_check as uptime_check
 import time, os
 
 SIMPLE_HTTP_UPTIME_CHECK_DOMAINS = ['https://fazool.us']

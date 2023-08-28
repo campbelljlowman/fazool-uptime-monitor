@@ -11,7 +11,7 @@ include .env
 export
 
 run: 
-	python3 uptime_monitor.py
+	python3 src/uptime_monitor.py
 
 run-docker:
 	docker run --rm \
