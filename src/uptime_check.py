@@ -21,6 +21,7 @@ class UptimeCheck:
             if self.expected_api_response_message != "" and response.text != self.expected_api_response_message:
                 current_check_is_healthy = False
         except Exception as e:
+            current_check_is_healthy = False
             print(f"error executing health check: {e}")
         
         if self.previous_check_is_healthy == True and current_check_is_healthy == False:
